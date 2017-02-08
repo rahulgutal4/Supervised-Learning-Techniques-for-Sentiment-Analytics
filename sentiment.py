@@ -102,8 +102,8 @@ def feature_vecs_NLP(train_pos, train_neg, test_pos, test_neg):
     train_pos = filterStopWords(train_pos, stopwords)
     train_neg = filterStopWords(train_neg, stopwords)
 
-    pos_freq = nltk.FreqDist(flatten(train_pos, stopwords))
-    neg_freq = nltk.FreqDist(flatten(train_neg, stopwords))
+    pos_freq = nltk.FreqDist(flatten(train_pos))
+    neg_freq = nltk.FreqDist(flatten(train_neg))
     
     features = []
     for t in pos_freq.items():
